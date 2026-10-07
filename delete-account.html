@@ -1,66 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delete Your DogTells Account</title>
-  <meta name="description" content="Request deletion of your DogTells account and associated data." />
-  <style>
-    :root { --cream:#f7f2e8; --green:#173c34; --gold:#9b7537; --white:#fff; --text:#4e605b; --red:#9c3e3e; --red-soft:#fff7f7; --red-line:#e3c9c9; }
-    * { box-sizing:border-box; }
-    body { margin:0; background:var(--cream); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
-    header { background:var(--green); color:var(--white); padding:26px 22px; }
-    .header-inner { max-width:940px; margin:0 auto; display:flex; justify-content:space-between; gap:20px; align-items:center; }
-    .brand { font-size:27px; font-weight:900; }
-    header a { color:#e3ece8; text-decoration:none; font-weight:700; }
-    main { max-width:940px; margin:0 auto; padding:46px 22px 70px; }
-    section { background:var(--red-soft); border:1px solid var(--red-line); border-radius:28px; padding:34px; }
-    .label { margin:0 0 7px; color:var(--gold); font-size:11px; font-weight:900; letter-spacing:1.6px; text-transform:uppercase; }
-    h1,h2 { color:var(--red); line-height:1.2; }
-    h1 { margin:0 0 18px; font-size:38px; }
-    h2 { margin:28px 0 8px; font-size:20px; }
-    .steps { padding-left:22px; }
-    .button { display:inline-block; margin:8px 0 12px; padding:14px 20px; border-radius:14px; background:var(--red); color:white; text-decoration:none; font-weight:800; }
-    .notice { margin-top:24px; padding:18px; border-radius:18px; background:white; border:1px solid var(--red-line); }
-    footer { padding:0 22px 45px; text-align:center; color:#6b7672; font-size:13px; }
-    @media(max-width:700px){ .header-inner{align-items:flex-start;flex-direction:column;} main{padding-top:28px;} section{padding:25px 22px;} h1{font-size:31px;} }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete your account | DogTells</title>
+<meta name="description" content="DogTells Privacy Policy, Terms &amp; Conditions and account deletion.">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #060A12; color: #C3CCDB; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif; }
+  header { position: sticky; top: 0; background: #0A101C; border-bottom: 1px solid #1E2A40; }
+  .bar { max-width: 760px; margin: 0 auto; padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .brand { color: #3DD9F5; font: 600 13px/1 ui-monospace, Menlo, Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; margin-right: auto; }
+  header a { color: #C3CCDB; text-decoration: none; font-size: 14px; }
+  header a:hover { color: #3DD9F5; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  section { padding-top: 24px; margin-bottom: 40px; scroll-margin-top: 64px; }
+  h1 { color: #F2F6FC; font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+  h2 { color: #F2F6FC; font-size: 24px; margin: 0 0 6px; }
+  h3 { color: #F2F6FC; font-size: 17px; margin: 26px 0 6px; }
+  p { margin: 0 0 12px; }
+  a { color: #3DD9F5; }
+  .meta { color: #7C8AA3; font: 500 12px/1.4 ui-monospace, Menlo, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px; }
+  .card { border: 1px solid #1E2A40; border-left: 2px solid #3DD9F5; border-radius: 12px; background: #0D1422; padding: 16px 18px; margin-top: 20px; }
+  ol { padding-left: 22px; margin: 0 0 12px; } li { margin-bottom: 6px; }
+  .button { display: inline-block; margin: 6px 0 12px; padding: 12px 18px; border-radius: 10px; background: #3DD9F5; color: #04121A; font-weight: 600; text-decoration: none; }
+  footer { max-width: 760px; margin: 0 auto; padding: 20px; border-top: 1px solid #1E2A40; color: #7C8AA3; font-size: 14px; }
+</style>
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <div class="brand">DogTells</div>
-      <a href="./">Privacy, Terms & Legal</a>
-    </div>
-  </header>
-  <main>
-    <section>
-      <p class="label">Account & Data</p>
-      <h1>Delete Your DogTells Account</h1>
-      <p>DogTells users can permanently delete their account directly inside the DogTells app. If you cannot access the app, you can also request account deletion by email.</p>
-
-      <h2>Delete your account in the app</h2>
-      <ol class="steps">
-        <li>Open DogTells and sign in to your account.</li>
-        <li>Open the Account screen.</li>
-        <li>Scroll to <strong>Delete My Account</strong>.</li>
-        <li>Tap <strong>Delete Account</strong>.</li>
-        <li>Review the warning and tap <strong>Continue</strong>.</li>
-        <li>Confirm your request by tapping <strong>Delete Permanently</strong>.</li>
-      </ol>
-
-      <h2>Request deletion without the app</h2>
-      <p>If you cannot access DogTells, email us from the email address associated with your DogTells account and ask us to delete your account and associated data.</p>
-      <a class="button" href="mailto:bgkygoodboy@gmail.com?subject=DogTells%20Account%20Deletion%20Request">Email DogTells to request deletion</a>
-      <p>Email: <strong>bgkygoodboy@gmail.com</strong></p>
-
-      <h2>What is deleted</h2>
-      <p>Account deletion permanently removes your DogTells account and associated saved DogTells account data, including saved learning progress, challenge activity and saved analysis history.</p>
-      <p>Some information may be retained where required for legitimate security, fraud-prevention, legal or regulatory purposes, as described in the DogTells Privacy Policy.</p>
-
-      <div class="notice"><strong>Deletion cannot be undone.</strong> If you want to use DogTells again after deleting your account, you will need to create a new account.</div>
-    </section>
-  </main>
-  <footer><strong>DogTells</strong><br />Educational canine body-language guidance.</footer>
+<header><div class="bar"><span class="brand">DogTells</span><a href="./#privacy">Privacy Policy</a><a href="./#terms">Terms &amp; Conditions</a><a href="./#delete-account">Delete account</a></div></header>
+<main>
+<section id="delete-account">
+<h1>Delete your DogTells account</h1>
+<p>You can delete your DogTells account and its data at any time.</p>
+<h3>In the app</h3>
+<ol>
+<li>Open DogTells and sign in.</li>
+<li>Go to <strong>Profile</strong>, then <strong>Settings</strong>.</li>
+<li>Scroll to <strong>Account</strong> and choose <strong>Delete account</strong>.</li>
+<li>Confirm twice. Deletion is immediate.</li>
+</ol>
+<h3>Without the app</h3>
+<p>Email us from the email address on your account and ask for it to be deleted. Requests are completed within 30 days.</p>
+<a class="button" href="mailto:privacy@caninebehaviorists.org?cc=bgkygoodboy@gmail.com&amp;subject=DogTells%20account%20deletion%20request">Email a deletion request</a>
+<p>Email: <strong>privacy@caninebehaviorists.org</strong> or <strong>bgkygoodboy@gmail.com</strong></p>
+<h3>What is deleted</h3>
+<p>Your account, email address, study record, assessment results and saved analysis reports are permanently deleted. Photos, videos and audio are not stored after an analysis finishes, so there are none to delete.</p>
+<h3>What is kept</h3>
+<p>Purchase records held by Apple or Google stay with them. Information that must be kept by law, or for security and fraud prevention, may be retained for as long as that is required.</p>
+<div class="card"><p style="margin:0">Deleting your account does not cancel a subscription. Cancel it in your App Store or Google Play account settings. Deletion cannot be undone.</p></div>
+</section>
+</main>
+<footer>DogTells is published by Benjamin McGill and powered by the <a href="https://www.caninebehaviorists.org/">Board of Canine Behaviorists</a>.</footer>
 </body>
 </html>

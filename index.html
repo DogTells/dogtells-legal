@@ -1,720 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>DogTells | Privacy, Terms & Account Deletion</title>
-
-  <meta
-    name="description"
-    content="Official privacy policy, terms and conditions, and account deletion information for DogTells."
-  />
-
-  <style>
-    :root {
-      --cream: #f7f2e8;
-      --green: #173c34;
-      --green-soft: #e9f1ee;
-      --gold: #9b7537;
-      --white: #ffffff;
-      --text: #4e605b;
-      --muted: #6b7672;
-      --line: #e5e0d5;
-      --red: #9c3e3e;
-      --red-soft: #fff7f7;
-      --red-line: #e3c9c9;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--text);
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
-      line-height: 1.6;
-    }
-
-    header {
-      background: var(--green);
-      color: var(--white);
-      padding: 26px 22px;
-    }
-
-    .header-inner {
-      max-width: 940px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      font-size: 27px;
-      font-weight: 900;
-      letter-spacing: -0.8px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    nav a {
-      color: #e3ece8;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    nav a:hover {
-      color: var(--white);
-    }
-
-    main {
-      max-width: 940px;
-      margin: 0 auto;
-      padding: 46px 22px 70px;
-    }
-
-    .hero {
-      background: var(--green);
-      color: var(--white);
-      border-radius: 30px;
-      padding: 38px;
-      margin-bottom: 28px;
-    }
-
-    .eyebrow {
-      margin: 0 0 9px;
-      color: #d5c49e;
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      margin: 0;
-      max-width: 700px;
-      font-size: clamp(36px, 6vw, 55px);
-      line-height: 1.05;
-      letter-spacing: -1.5px;
-    }
-
-    .hero p {
-      max-width: 680px;
-      margin: 18px 0 0;
-      color: #e3ece8;
-      font-size: 17px;
-    }
-
-    .quick-links {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-bottom: 34px;
-    }
-
-    .quick-link {
-      display: block;
-      background: var(--white);
-      border-radius: 20px;
-      padding: 21px;
-      color: var(--green);
-      text-decoration: none;
-      font-weight: 900;
-      border: 1px solid rgba(23, 60, 52, 0.06);
-    }
-
-    .quick-link span {
-      display: block;
-      margin-top: 5px;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 500;
-    }
-
-    section {
-      scroll-margin-top: 25px;
-      background: var(--white);
-      border-radius: 28px;
-      padding: 34px;
-      margin-bottom: 25px;
-    }
-
-    .section-label {
-      margin: 0 0 7px;
-      color: var(--gold);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      margin: 0 0 8px;
-      color: var(--green);
-      font-size: 32px;
-      line-height: 1.15;
-      letter-spacing: -0.7px;
-    }
-
-    .updated {
-      margin: 0 0 25px;
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    h3 {
-      margin: 28px 0 8px;
-      color: var(--green);
-      font-size: 18px;
-      line-height: 1.35;
-    }
-
-    p {
-      margin: 0 0 15px;
-    }
-
-    .notice {
-      margin-top: 25px;
-      padding: 19px;
-      border-radius: 19px;
-      background: var(--green-soft);
-      color: #41564f;
-    }
-
-    .delete-section {
-      background: var(--red-soft);
-      border: 1px solid var(--red-line);
-    }
-
-    .delete-section h2,
-    .delete-section h3 {
-      color: var(--red);
-    }
-
-    .steps {
-      margin: 22px 0;
-      padding: 0;
-      list-style: none;
-      counter-reset: deletion-steps;
-    }
-
-    .steps li {
-      counter-increment: deletion-steps;
-      position: relative;
-      margin-bottom: 12px;
-      padding: 15px 16px 15px 54px;
-      background: var(--white);
-      border: 1px solid var(--red-line);
-      border-radius: 16px;
-    }
-
-    .steps li::before {
-      content: counter(deletion-steps);
-      position: absolute;
-      left: 15px;
-      top: 13px;
-      width: 27px;
-      height: 27px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 9px;
-      background: #fbeaea;
-      color: var(--red);
-      font-size: 13px;
-      font-weight: 900;
-    }
-
-    footer {
-      padding: 0 22px 45px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    footer strong {
-      color: var(--green);
-    }
-
-    @media (max-width: 700px) {
-      .header-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      nav {
-        gap: 14px;
-      }
-
-      main {
-        padding-top: 28px;
-      }
-
-      .hero {
-        padding: 28px 24px;
-      }
-
-      .quick-links {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 25px 22px;
-      }
-
-      h2 {
-        font-size: 27px;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy, Terms and account deletion | DogTells</title>
+<meta name="description" content="DogTells Privacy Policy, Terms &amp; Conditions and account deletion.">
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #060A12; color: #C3CCDB; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif; }
+  header { position: sticky; top: 0; background: #0A101C; border-bottom: 1px solid #1E2A40; }
+  .bar { max-width: 760px; margin: 0 auto; padding: 14px 20px; display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+  .brand { color: #3DD9F5; font: 600 13px/1 ui-monospace, Menlo, Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; margin-right: auto; }
+  header a { color: #C3CCDB; text-decoration: none; font-size: 14px; }
+  header a:hover { color: #3DD9F5; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  section { padding-top: 24px; margin-bottom: 40px; scroll-margin-top: 64px; }
+  h1 { color: #F2F6FC; font-size: 30px; line-height: 1.2; margin: 0 0 8px; }
+  h2 { color: #F2F6FC; font-size: 24px; margin: 0 0 6px; }
+  h3 { color: #F2F6FC; font-size: 17px; margin: 26px 0 6px; }
+  p { margin: 0 0 12px; }
+  a { color: #3DD9F5; }
+  .meta { color: #7C8AA3; font: 500 12px/1.4 ui-monospace, Menlo, Consolas, monospace; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px; }
+  .card { border: 1px solid #1E2A40; border-left: 2px solid #3DD9F5; border-radius: 12px; background: #0D1422; padding: 16px 18px; margin-top: 20px; }
+  ol { padding-left: 22px; margin: 0 0 12px; } li { margin-bottom: 6px; }
+  .button { display: inline-block; margin: 6px 0 12px; padding: 12px 18px; border-radius: 10px; background: #3DD9F5; color: #04121A; font-weight: 600; text-decoration: none; }
+  footer { max-width: 760px; margin: 0 auto; padding: 20px; border-top: 1px solid #1E2A40; color: #7C8AA3; font-size: 14px; }
+</style>
 </head>
-
 <body>
-  <header>
-    <div class="header-inner">
-      <div class="brand">DogTells</div>
-
-      <nav aria-label="Legal navigation">
-        <a href="#privacy">Privacy</a>
-        <a href="#terms">Terms</a>
-        <a href="#delete-account">Delete Account</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="hero">
-      <p class="eyebrow">Privacy & Legal</p>
-
-      <h1>Your information & rights.</h1>
-
-      <p>
-        Official privacy, terms and account deletion information for DogTells,
-        an educational canine body-language application.
-      </p>
-    </div>
-
-    <div class="quick-links">
-      <a class="quick-link" href="#privacy">
-        Privacy Policy
-        <span>How DogTells handles your information</span>
-      </a>
-
-      <a class="quick-link" href="#terms">
-        Terms & Conditions
-        <span>Rules and responsibilities for using DogTells</span>
-      </a>
-
-      <a class="quick-link" href="#delete-account">
-        Delete Account
-        <span>How to permanently delete your DogTells account</span>
-      </a>
-    </div>
-
-    <section id="privacy">
-      <p class="section-label">DogTells</p>
-      <h2>Privacy Policy</h2>
-      <p class="updated">Effective date: 29 August 2026</p>
-
-      <p>
-        DogTells respects your privacy. This Privacy Policy explains the
-        information DogTells may collect, how that information is used, and the
-        choices you have regarding your information.
-      </p>
-
-      <h3>1. Information you provide</h3>
-
-      <p>
-        When you create a DogTells account, we may collect your email address
-        and authentication information necessary to create, secure and maintain
-        your account.
-      </p>
-
-      <p>
-        When you use DogTells, information associated with your account may
-        include lesson progress, challenge results, challenge scores and
-        analysis history.
-      </p>
-
-      <h3>2. Dog photos and videos</h3>
-
-      <p>
-        DogTells allows you to select dog photos and short videos for
-        body-language analysis. Media you choose to submit is processed only
-        when you intentionally request an analysis.
-      </p>
-
-      <p>
-        Submitted photos, video frames and related information may be
-        transmitted securely to service providers that DogTells uses to perform
-        artificial-intelligence analysis.
-      </p>
-
-      <p>
-        DogTells does not claim ownership of photographs or videos you submit.
-        You should only submit media that you have permission to use.
-      </p>
-
-      <h3>3. Artificial-intelligence processing</h3>
-
-      <p>
-        DogTells uses artificial-intelligence services to examine visible
-        canine body-language signals and produce educational explanations.
-        Information submitted for an analysis may therefore be processed by an
-        AI service provider for the purpose of providing the requested DogTells
-        analysis.
-      </p>
-
-      <p>
-        AI-generated information can be incomplete or incorrect and should not
-        be considered a veterinary diagnosis, behavioral diagnosis, medical
-        recommendation or guarantee of an animal's future behavior.
-      </p>
-
-      <h3>4. Account and saved information</h3>
-
-      <p>
-        DogTells may store information necessary to provide account features,
-        including your email address, completed lessons, challenge activity and
-        saved analysis history.
-      </p>
-
-      <p>
-        DogTells currently uses Supabase for services including account
-        authentication and database storage.
-      </p>
-
-      <h3>5. How information is used</h3>
-
-      <p>
-        Information may be used to provide and operate DogTells, authenticate
-        your account, save your progress, provide requested analyses, protect
-        the security and reliability of the service, troubleshoot technical
-        problems and improve DogTells.
-      </p>
-
-      <h3>6. Sharing of information</h3>
-
-      <p>DogTells does not sell your personal information.</p>
-
-      <p>
-        Information may be processed by technology providers that are necessary
-        to operate the service, such as hosting, database, authentication and
-        artificial-intelligence service providers.
-      </p>
-
-      <p>
-        Information may also be disclosed when reasonably necessary to comply
-        with applicable law, enforce legal rights, investigate misuse or
-        protect users, animals or others from harm.
-      </p>
-
-      <h3>7. Data security</h3>
-
-      <p>
-        DogTells uses reasonable technical and organizational safeguards
-        designed to protect information. No method of electronic storage or
-        transmission can be guaranteed to be completely secure.
-      </p>
-
-      <h3>8. Data retention</h3>
-
-      <p>
-        Account information and saved DogTells activity may be retained while
-        your account remains active or while reasonably necessary to provide
-        the service.
-      </p>
-
-      <p>
-        Some information may be retained when required for legitimate security,
-        fraud-prevention, legal or regulatory purposes.
-      </p>
-
-      <h3>9. Deleting your account</h3>
-
-      <p>
-        You may initiate deletion of your DogTells account from the Account
-        screen. Account deletion is intended to permanently remove your
-        DogTells account and associated saved account data, subject to any
-        information that must lawfully be retained.
-      </p>
-
-      <h3>10. Children's privacy</h3>
-
-      <p>
-        DogTells is an educational canine body-language application and is not
-        designed to knowingly collect unnecessary personal information from
-        children.
-      </p>
-
-      <h3>11. Changes to this policy</h3>
-
-      <p>
-        DogTells may update this Privacy Policy as the application, technology
-        or legal requirements change. The effective date shown at the top of
-        this policy will be updated when appropriate.
-      </p>
-
-      <h3>12. Contact</h3>
-
-      <p>
-        Privacy questions, account-deletion questions and other privacy requests
-        may be directed to DogTells through the official DogTells contact method
-        published with the application.
-      </p>
-    </section>
-
-    <section id="terms">
-      <p class="section-label">DogTells</p>
-      <h2>Terms & Conditions</h2>
-      <p class="updated">Effective date: 29 August 2026</p>
-
-      <p>
-        These Terms & Conditions govern your use of DogTells. By creating an
-        account or using DogTells, you agree to these terms.
-      </p>
-
-      <h3>1. What DogTells provides</h3>
-
-      <p>
-        DogTells is an educational tool designed to help users learn about
-        visible canine body language and behavioral signals.
-      </p>
-
-      <p>
-        DogTells may provide educational lessons, challenges and
-        artificial-intelligence-assisted interpretations of photographs or
-        videos submitted by users.
-      </p>
-
-      <h3>2. Educational information only</h3>
-
-      <p>
-        DogTells does not provide veterinary diagnosis, veterinary treatment,
-        medical diagnosis, emergency services or a definitive behavioral
-        diagnosis.
-      </p>
-
-      <p>
-        DogTells analyses are based on visible information available in the
-        submitted image or video. A photograph or short video cannot show every
-        factor affecting an animal's behavior.
-      </p>
-
-      <h3>3. Artificial intelligence</h3>
-
-      <p>
-        Some DogTells features use artificial intelligence. AI-generated
-        information may contain errors, may miss important context and may
-        produce different interpretations from qualified professionals.
-      </p>
-
-      <p>
-        You should use DogTells as one educational source rather than as the
-        sole basis for decisions involving animal health, safety, aggression or
-        serious behavioral concerns.
-      </p>
-
-      <h3>4. Veterinary and professional assistance</h3>
-
-      <p>
-        Seek appropriate veterinary care when a dog may be injured, ill or
-        experiencing a medical problem.
-      </p>
-
-      <p>
-        For significant aggression, bite risk, severe fear, dangerous behavior
-        or complex behavioral concerns, users should seek assistance from an
-        appropriately qualified canine behavior professional.
-      </p>
-
-      <h3>5. Animal safety</h3>
-
-      <p>
-        Never place yourself, another person or an animal in danger in order to
-        obtain a photograph, video or behavioral observation for DogTells.
-      </p>
-
-      <p>
-        Do not intentionally provoke threatening, fearful or aggressive
-        behavior for the purpose of obtaining an analysis.
-      </p>
-
-      <h3>6. Your account</h3>
-
-      <p>
-        You are responsible for maintaining reasonable security over your
-        account credentials and for activity performed through your account.
-      </p>
-
-      <p>
-        You agree to provide accurate account information and not to impersonate
-        another person.
-      </p>
-
-      <h3>7. Submitted content</h3>
-
-      <p>
-        You retain your rights in photographs and videos you submit to DogTells.
-      </p>
-
-      <p>
-        By submitting content for analysis, you give DogTells permission to
-        process that content as reasonably necessary to provide the requested
-        feature.
-      </p>
-
-      <p>
-        You must have the legal right or appropriate permission to submit the
-        content you provide.
-      </p>
-
-      <h3>8. Acceptable use</h3>
-
-      <p>
-        You may not misuse DogTells, attempt to interfere with its systems,
-        access another user's account without permission, use the service
-        unlawfully or submit content in violation of another person's rights.
-      </p>
-
-      <h3>9. Availability and changes</h3>
-
-      <p>
-        DogTells may change, improve, suspend or discontinue features as the
-        service develops. Continuous or error-free availability is not
-        guaranteed.
-      </p>
-
-      <h3>10. No guarantee of results</h3>
-
-      <p>
-        Canine behavior is affected by context, learning history, health,
-        environment and many other factors. DogTells does not guarantee that an
-        analysis will predict future behavior or prevent injury, bites,
-        aggression or other incidents.
-      </p>
-
-      <h3>11. Limitation of responsibility</h3>
-
-      <p>
-        To the extent permitted by applicable law, DogTells is provided on an
-        as-available basis and DogTells is not responsible for decisions made
-        solely in reliance on automated or educational information provided
-        through the application.
-      </p>
-
-      <p>
-        Nothing in these Terms excludes rights or remedies that cannot lawfully
-        be excluded under applicable consumer-protection law.
-      </p>
-
-      <h3>12. Account termination</h3>
-
-      <p>
-        Users may request deletion of their DogTells account through the Account
-        screen. DogTells may also restrict access where reasonably necessary to
-        address unlawful use, security threats or serious misuse of the service.
-      </p>
-
-      <h3>13. Privacy</h3>
-
-      <p>
-        Use of DogTells is also subject to the DogTells Privacy Policy, which
-        explains how information is collected and handled.
-      </p>
-
-      <h3>14. Changes to these terms</h3>
-
-      <p>
-        These Terms & Conditions may be updated as DogTells develops or legal
-        requirements change. The effective date shown above will be updated when
-        appropriate.
-      </p>
-
-      <h3>15. Contact</h3>
-
-      <p>
-        Questions regarding these Terms may be directed to DogTells through the
-        official DogTells contact method published with the application.
-      </p>
-
-      <div class="notice">
-        <strong>Educational use:</strong>
-        DogTells is educational. Serious medical, safety, aggression or
-        behavioral concerns should be addressed with an appropriately qualified
-        professional.
-      </div>
-    </section>
-
-    <section id="delete-account" class="delete-section">
-      <p class="section-label">Account & Data</p>
-      <h2>Delete Your DogTells Account</h2>
-
-      <p>
-        DogTells users can permanently delete their account directly from
-        inside the DogTells application.
-      </p>
-
-      <h3>How to delete your account</h3>
-
-      <ol class="steps">
-        <li>Open DogTells and sign in to your account.</li>
-        <li>Open your Account screen.</li>
-        <li>Scroll to <strong>Delete My Account</strong>.</li>
-        <li>Tap <strong>Delete Account</strong>.</li>
-        <li>Review the warning and tap <strong>Continue</strong>.</li>
-        <li>
-          Confirm your request by tapping
-          <strong>Delete Permanently</strong>.
-        </li>
-      </ol>
-
-      <h3>What is deleted</h3>
-
-      <p>
-        Account deletion permanently removes your DogTells account and
-        associated saved DogTells account data, including saved learning
-        progress, challenge activity and saved analysis history.
-      </p>
-
-      <p>
-        Deletion cannot be undone. If you want to use DogTells again after
-        deleting your account, you will need to create a new account.
-      </p>
-
-      <div class="notice">
-        If you have questions about account deletion or cannot access your
-        account, use the official DogTells contact method published with the
-        application.
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <strong>DogTells</strong><br />
-    Educational canine body-language guidance.<br />
-    DogTells should not replace professional veterinary or behavioral advice.
-  </footer>
+<header><div class="bar"><span class="brand">DogTells</span><a href="./#privacy">Privacy Policy</a><a href="./#terms">Terms &amp; Conditions</a><a href="./#delete-account">Delete account</a></div></header>
+<main>
+<h1>Your information and rights</h1>
+<p>The Privacy Policy and Terms &amp; Conditions for the DogTells app, and how to delete your account.</p>
+<section id="privacy">
+<h2>Privacy Policy</h2>
+<div class="meta">Effective date: 5 October 2026</div>
+<p>DogTells respects your privacy. This Privacy Policy explains the information DogTells may collect, how that information is used, and the choices you have regarding your information. DogTells is published and operated by Benjamin McGill, a sole trader registered in Australia, and is created with the Board of Canine Behaviorists (BCB), caninebehaviorists.org.</p>
+<h3>1. Information you provide</h3>
+<p>When you create a DogTells account, we collect your email address and the authentication information needed to create, secure and maintain your account.</p>
+<p>You can explore lessons and games as a guest without an account. Guest progress is stored only on your device.</p>
+<p>If you choose to enter your dog's name or a note about what was happening, that text is sent with your analysis request.</p>
+<p>Your learning progress, your settings and your agreement to analysis are stored on your device. When you are signed in, a copy of your progress is stored with your account so that it follows you between devices.</p>
+<h3>2. Dog photos, videos and sound</h3>
+<p>DogTells lets you take or choose dog photos and short videos for body-language analysis. Media is processed only when you intentionally request an analysis.</p>
+<p>For a photo, a resized copy of the image is sent for analysis. For a video, several still frames and the audio track from the clip are sent for analysis.</p>
+<p>The DogTells server does not store your photos, videos or audio once the analysis is complete. Our artificial-intelligence provider may keep request data for a limited period under its own data policies. The written result is saved to your analysis history.</p>
+<p>DogTells does not claim ownership of media you submit. Only submit media that you have permission to use.</p>
+<p>DogTells asks for camera access only when you choose to take a photo or video in the app. When you choose an existing file, your device's own picker is used and DogTells receives only the file you select.</p>
+<h3>3. Artificial-intelligence processing</h3>
+<p>DogTells uses artificial-intelligence services provided by OpenAI to examine visible and audible canine signals, to write the analysis, and to turn the written analysis into speech when you ask to listen to it.</p>
+<p>Before your first analysis, DogTells asks you to agree to your media being sent to OpenAI. If you do not agree, nothing is sent and the rest of DogTells remains available.</p>
+<p>What is sent to OpenAI is limited to the photo or video frames, the sound from a video, the language of the report, and your dog's name and note if you entered them. Your email address is not sent.</p>
+<p>AI-generated information can be incomplete or incorrect and is not a veterinary diagnosis, behavioral diagnosis, medical recommendation or guarantee of future behavior.</p>
+<h3>4. Account and saved information</h3>
+<p>DogTells stores information needed to provide account features, including your email address, learning progress, game results, your chosen settings and saved analysis history.</p>
+<p>DogTells uses Supabase for account authentication and database storage.</p>
+<h3>5. Purchases</h3>
+<p>Subscriptions and analysis packs are purchased through the Apple App Store or Google Play. DogTells does not receive your payment card details.</p>
+<p>DogTells uses RevenueCat to confirm purchases and entitlements. RevenueCat receives an account identifier and purchase information from the store.</p>
+<h3>6. How information is used</h3>
+<p>Information is used to provide and operate DogTells, authenticate your account, save your progress, provide requested analyses and audio, count the analyses included with your plan, protect the security and reliability of the service, troubleshoot problems and improve DogTells.</p>
+<h3>7. Sharing of information</h3>
+<p>DogTells does not sell your personal information.</p>
+<p>Information is processed by technology providers needed to operate the service, such as hosting, database, authentication, purchase and artificial-intelligence providers.</p>
+<p>Information may also be disclosed when reasonably necessary to comply with applicable law, enforce legal rights, investigate misuse or protect users, animals or others from harm.</p>
+<h3>8. Data security</h3>
+<p>DogTells uses reasonable technical and organizational safeguards designed to protect information. No method of electronic storage or transmission can be guaranteed to be completely secure.</p>
+<h3>9. Data retention</h3>
+<p>Account information and saved DogTells activity are retained while your account remains active or while reasonably necessary to provide the service.</p>
+<p>Some information may be retained when required for legitimate security, fraud-prevention, legal or regulatory purposes.</p>
+<h3>10. Deleting your account</h3>
+<p>You can delete your DogTells account from Settings. Deletion permanently removes your account and associated saved data, subject to any information that must lawfully be retained.</p>
+<p>If you cannot use the app, you can ask for your account and its data to be deleted by emailing privacy@caninebehaviorists.org from the email address on the account.</p>
+<p>Deleting your account does not cancel a store subscription. Cancel subscriptions through your App Store or Google Play account.</p>
+<h3>11. Children's privacy</h3>
+<p>DogTells is not directed to children under 13, or under the higher age that applies where you live, and does not knowingly collect personal information from them. If you believe a child has created an account, contact us and it will be deleted.</p>
+<h3>12. Your choices and rights</h3>
+<p>You can use the curriculum, assessments and research library without an account, decline the analysis agreement, change or clear your details in Settings, and delete your account at any time.</p>
+<p>Depending on where you live, you may have the right to ask for a copy of your personal information, to have it corrected or deleted, or to object to or restrict how it is used. To make a request, use the contact details below.</p>
+<h3>13. International processing</h3>
+<p>DogTells and its technology providers operate in more than one country. Your information may be processed in a country other than your own, where privacy laws may differ.</p>
+<h3>14. Links to other websites</h3>
+<p>DogTells links to the website of the Board of Canine Behaviorists and to search results for the published studies in the research library. Those websites are governed by their own privacy policies. Membership of, or certification by, the Board of Canine Behaviorists is arranged on its website and is separate from DogTells.</p>
+<h3>15. Changes to this policy</h3>
+<p>DogTells may update this Privacy Policy as the application, technology or legal requirements change. The effective date at the top will be updated when appropriate.</p>
+<h3>16. Contact</h3>
+<p>Privacy questions, account-deletion requests and other privacy requests can be sent to privacy@caninebehaviorists.org.</p>
+<div class="card"><p style="margin:0">This Privacy Policy is also published at dogtells.onrender.com/privacy. Instructions for deleting an account are at dogtells.onrender.com/delete-account.</p></div>
+</section>
+<section id="terms">
+<h2>Terms &amp; Conditions</h2>
+<div class="meta">Effective date: 5 October 2026</div>
+<p>These Terms &amp; Conditions govern your use of DogTells. By creating an account or using DogTells, you agree to these terms.</p>
+<h3>1. What DogTells provides</h3>
+<p>DogTells is an educational tool designed to help people learn about canine body language and behavioral signals. It is published and operated by Benjamin McGill, a sole trader registered in Australia, and is created with the Board of Canine Behaviorists (BCB).</p>
+<p>DogTells provides a curriculum, assessments, a research library and artificial-intelligence-assisted interpretations of photographs or videos submitted by users, in written and spoken form.</p>
+<h3>2. Educational information only</h3>
+<p>DogTells does not provide veterinary diagnosis, veterinary treatment, medical diagnosis, emergency services or a definitive behavioral diagnosis.</p>
+<p>DogTells analyses are based on the information available in the submitted image or video. A photograph or short video cannot show every factor affecting an animal's behavior.</p>
+<h3>3. Artificial intelligence</h3>
+<p>Some DogTells features use artificial intelligence. AI-generated information may contain errors, may miss important context and may differ from the view of qualified professionals.</p>
+<p>Use DogTells as one educational source rather than as the sole basis for decisions involving animal health, safety, aggression or serious behavioral concerns.</p>
+<h3>4. Veterinary and professional assistance</h3>
+<p>Seek appropriate veterinary care when a dog may be injured, ill or experiencing a medical problem.</p>
+<p>For significant aggression, bite risk, severe fear, dangerous behavior or complex behavioral concerns, seek help from an appropriately qualified canine behavior professional.</p>
+<h3>5. Animal safety</h3>
+<p>Never place yourself, another person or an animal in danger in order to obtain a photograph, video or behavioral observation for DogTells.</p>
+<p>Do not intentionally provoke threatening, fearful or aggressive behavior in order to obtain an analysis.</p>
+<h3>6. Your account</h3>
+<p>You are responsible for maintaining reasonable security over your account credentials and for activity performed through your account.</p>
+<p>You agree to provide accurate account information and not to impersonate another person.</p>
+<h3>7. Free analyses, subscriptions and packs</h3>
+<p>New accounts may receive a limited number of free analyses. Free analyses are offered at the discretion of DogTells and may change.</p>
+<p>Subscriptions renew automatically until cancelled. Payment is charged to your App Store or Google Play account. You can manage or cancel a subscription in your store account settings.</p>
+<p>A subscription includes a monthly allowance of analyses that resets each billing month and does not carry over. Standard covers photo analyses; Pro also covers video analysis with sound. The number of analyses included is shown in the app before you buy.</p>
+<p>Analysis packs are one-time purchases that add analyses to your account. Pack analyses do not expire while your account remains open.</p>
+<p>Prices are shown in the app before you buy and may vary by country. Refunds are handled by the App Store or Google Play under their policies.</p>
+<h3>8. Board of Canine Behaviorists</h3>
+<p>DogTells links to the website of the Board of Canine Behaviorists. Membership and certification offered there are separate from DogTells, are arranged on that website under its own terms, and are not needed to use DogTells. They do not unlock or change any feature of the app.</p>
+<h3>9. Research library</h3>
+<p>Study summaries are written for general readers and are not a substitute for the original papers. Rights in the original papers remain with their authors and publishers.</p>
+<h3>10. Submitted content</h3>
+<p>You retain your rights in photographs and videos you submit to DogTells.</p>
+<p>By submitting content for analysis, you give DogTells permission to process that content as reasonably necessary to provide the requested feature.</p>
+<p>You must have the legal right or appropriate permission to submit the content you provide.</p>
+<h3>11. Acceptable use</h3>
+<p>You may not misuse DogTells, attempt to interfere with its systems, access another user's account without permission, use the service unlawfully or submit content in violation of another person's rights.</p>
+<h3>12. Availability and changes</h3>
+<p>DogTells may change, improve, suspend or discontinue features as the service develops. Continuous or error-free availability is not guaranteed.</p>
+<h3>13. No guarantee of results</h3>
+<p>Canine behavior is affected by context, learning history, health, environment and many other factors. DogTells does not guarantee that an analysis will predict future behavior or prevent injury, bites, aggression or other incidents.</p>
+<h3>14. Limitation of responsibility</h3>
+<p>To the extent permitted by applicable law, DogTells is provided on an as-available basis and DogTells is not responsible for decisions made solely in reliance on automated or educational information provided through the application.</p>
+<p>Nothing in these Terms excludes rights or remedies that cannot lawfully be excluded under applicable consumer-protection law.</p>
+<h3>15. Account termination</h3>
+<p>You may delete your DogTells account from Settings. DogTells may also restrict access where reasonably necessary to address unlawful use, security threats or serious misuse of the service.</p>
+<h3>16. Privacy</h3>
+<p>Use of DogTells is also subject to the DogTells Privacy Policy, which explains how information is collected and handled.</p>
+<h3>17. Changes to these terms</h3>
+<p>These Terms &amp; Conditions may be updated as DogTells develops or legal requirements change. The effective date shown above will be updated when appropriate.</p>
+<h3>18. Contact</h3>
+<p>Questions regarding these Terms can be sent to hello@caninebehaviorists.org.</p>
+<div class="card"><p style="margin:0">DogTells is educational. Serious medical, safety, aggression or behavioral concerns should be addressed with an appropriately qualified professional.</p></div>
+</section>
+<section id="delete-account">
+<h2>Delete your DogTells account</h2>
+<p>You can delete your DogTells account and its data at any time.</p>
+<h3>In the app</h3>
+<ol>
+<li>Open DogTells and sign in.</li>
+<li>Go to <strong>Profile</strong>, then <strong>Settings</strong>.</li>
+<li>Scroll to <strong>Account</strong> and choose <strong>Delete account</strong>.</li>
+<li>Confirm twice. Deletion is immediate.</li>
+</ol>
+<h3>Without the app</h3>
+<p>Email us from the email address on your account and ask for it to be deleted. Requests are completed within 30 days.</p>
+<a class="button" href="mailto:privacy@caninebehaviorists.org?cc=bgkygoodboy@gmail.com&amp;subject=DogTells%20account%20deletion%20request">Email a deletion request</a>
+<p>Email: <strong>privacy@caninebehaviorists.org</strong> or <strong>bgkygoodboy@gmail.com</strong></p>
+<h3>What is deleted</h3>
+<p>Your account, email address, study record, assessment results and saved analysis reports are permanently deleted. Photos, videos and audio are not stored after an analysis finishes, so there are none to delete.</p>
+<h3>What is kept</h3>
+<p>Purchase records held by Apple or Google stay with them. Information that must be kept by law, or for security and fraud prevention, may be retained for as long as that is required.</p>
+<div class="card"><p style="margin:0">Deleting your account does not cancel a subscription. Cancel it in your App Store or Google Play account settings. Deletion cannot be undone.</p></div>
+</section>
+</main>
+<footer>DogTells is published by Benjamin McGill and powered by the <a href="https://www.caninebehaviorists.org/">Board of Canine Behaviorists</a>.</footer>
 </body>
 </html>
